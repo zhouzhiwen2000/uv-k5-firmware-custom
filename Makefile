@@ -26,7 +26,7 @@ ENABLE_FLASHLIGHT             ?= 1
 ENABLE_BIG_FREQ               ?= 1
 ENABLE_KEEP_MEM_NAME          ?= 1
 ENABLE_WIDE_RX                ?= 1
-ENABLE_TX_WHEN_AM             ?= 1
+ENABLE_TX_WHEN_AM             ?= 0
 ENABLE_F_CAL_MENU             ?= 0
 ENABLE_CTCSS_TAIL_PHASE_SHIFT ?= 0
 ENABLE_BOOT_BEEPS             ?= 0
@@ -71,7 +71,7 @@ ENABLE_MESSENGER_NOTIFICATION			= 1
 ENABLE_4732 =0
 ENABLE_DOPPLER               =0
 #############################################################
-PACKED_FILE_SUFFIX = LOSEHU126
+PACKED_FILE_SUFFIX = FirmwareV1.0
 
 ifeq ($(ENABLE_CHINESE_FULL),0)
     ifeq ($(ENABLE_ENGLISH),1)
@@ -112,9 +112,9 @@ endif
 
 ifeq ($(ENABLE_CHINESE_FULL),0)
 	ENABLE_EEPROM_TYPE=0
-	ENABLE_MESSENGER              		=0
-    ENABLE_MESSENGER_DELIVERY_NOTIFICATION	= 0
-    ENABLE_MESSENGER_NOTIFICATION			= 0
+#	ENABLE_MESSENGER              		=0
+#    ENABLE_MESSENGER_DELIVERY_NOTIFICATION	= 0
+#    ENABLE_MESSENGER_NOTIFICATION			= 0
 
     $(info Normal)
 endif
@@ -295,7 +295,7 @@ endif
 OBJCOPY = arm-none-eabi-objcopy
 SIZE = arm-none-eabi-size
 
-AUTHOR_STRING ?= LOSEHU
+AUTHOR_STRING ?= GENERIC
 # the user might not have/want git installed
 # can set own version string here (max 7 chars)
 ifneq (, $(shell $(WHERE) git))

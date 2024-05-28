@@ -5,5 +5,9 @@
             "binaryPath": "c:\\Users\\RUPC\\Desktop\\losehu\\uv-k5-firmware-custom\\firmware",
             "binaryArgs": []
         }
-    ]
+    ],
+    "files.associations": {
+        "status.h": "c",
+        "version.h": "c"
+    }
 }
